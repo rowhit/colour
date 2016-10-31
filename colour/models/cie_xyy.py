@@ -56,19 +56,22 @@ def XYZ_to_xyY(
     Parameters
     ----------
     XYZ : array_like
+        metadata : {'type': 'CIE XYZ', 'symbol': 'XYZ', 'extent': (0, 1)}
         *CIE XYZ* tristimulus values.
     illuminant : array_like, optional
+        metadata : {'type': 'CIE xyY', 'symbol': 'xyY', 'extent': (0, 1)}
         Reference *illuminant* chromaticity coordinates.
 
     Returns
     -------
     ndarray
+        metadata : {'type': 'CIE xyY', 'symbol': 'xyY', 'extent': (0, 1)}
         *CIE xyY* colourspace array.
 
     Notes
     -----
-    -   Input *CIE XYZ* tristimulus values are in domain [0, 1].
-    -   Output *CIE xyY* colourspace array is in range [0, 1].
+    metadata : {'classifier': 'Colour Model Conversion Function',
+        'method_name': 'CIE 1931', 'method_strict_name': 'CIE 1931'}
 
     References
     ----------
@@ -103,17 +106,19 @@ def xyY_to_XYZ(xyY):
     Parameters
     ----------
     xyY : array_like
+        metadata : {'type': 'CIE xyY', 'symbol': 'xyY', 'extent': (0, 1)}
         *CIE xyY* colourspace array.
 
     Returns
     -------
     ndarray
+        metadata : {'type': 'CIE XYZ', 'symbol': 'XYZ', 'extent': (0, 1)}
         *CIE XYZ* tristimulus values.
 
     Notes
     -----
-    -   Input *CIE xyY* colourspace array is in domain [0, 1].
-    -   Output *CIE XYZ* tristimulus values are in range [0, 1].
+    metadata : {'classifier': 'Colour Model Conversion Function',
+        'method_name': 'CIE 1931', 'method_strict_name': 'CIE 1931'}
 
     References
     ----------
@@ -148,15 +153,23 @@ def xy_to_xyY(xy, Y=1):
     Parameters
     ----------
     xy : array_like
+        metadata : {'type': 'CIE xyY', 'symbol': 'xyY', 'extent': (0, 1)}
         *xy* chromaticity coordinates or *CIE xyY* colourspace array.
     Y : numeric, optional
+        metadata : {'type': 'Luminance', 'symbol': 'Y', 'extent': (0, 1)}
         Optional :math:`Y` Luminance value used to construct the *CIE xyY*
         colourspace array, otherwise the :math:`Y` Luminance will be set to 1.
 
     Returns
     -------
     ndarray
+        metadata : {'type': 'CIE xyY', 'symbol': 'xyY', 'extent': (0, 1)}
         *CIE xyY* colourspace array.
+
+    Notes
+    -----
+    metadata : {'classifier': 'Colour Model Conversion Function',
+        'method_name': 'CIE 1931', 'method_strict_name': 'CIE 1931'}
 
     See Also
     --------
@@ -168,8 +181,6 @@ def xy_to_xyY(xy, Y=1):
         illuminant argument *luminance* value in various :mod:`colour.models`
         package objects such as :func:`colour.models.Lab_to_XYZ` or
         :func:`colour.models.Luv_to_XYZ`.
-    -   Input *xy* chromaticity coordinates are in domain [0, 1].
-    -   Output *CIE xyY* colourspace array is in range [0, 1].
 
     Examples
     --------
@@ -210,21 +221,23 @@ def xyY_to_xy(xyY):
     Parameters
     ----------
     xyY : array_like
+        metadata : {'type': 'CIE xyY', 'symbol': 'xyY', 'extent': (0, 1)}
         *CIE xyY* colourspace array or *xy* chromaticity coordinates.
 
     Returns
     -------
     ndarray
+        metadata : {'type': 'CIE xy', 'symbol': 'xy', 'extent': (0, 1)}
         *xy* chromaticity coordinates.
+
+    Notes
+    -----
+    metadata : {'classifier': 'Colour Model Conversion Function',
+        'method_name': 'CIE 1931', 'method_strict_name': 'CIE 1931'}
 
     See Also
     --------
     xy_to_xyY
-
-    Notes
-    -----
-    -   Input *CIE xyY* colourspace array is in domain [0, 1].
-    -   Output *xy* chromaticity coordinates are in range [0, 1].
 
     Examples
     --------
@@ -257,17 +270,19 @@ def xy_to_XYZ(xy):
     Parameters
     ----------
     xy : array_like
+        metadata : {'type': 'CIE xy', 'symbol': 'xy', 'extent': (0, 1)}
         *xy* chromaticity coordinates.
 
     Returns
     -------
     ndarray
+        metadata : {'type': 'CIE XYZ', 'symbol': 'XYZ', 'extent': (0, 1)}
         *CIE XYZ* tristimulus values.
 
     Notes
     -----
-    -   Input *xy* chromaticity coordinates are in domain [0, 1].
-    -   Output *CIE XYZ* tristimulus values are in range [0, 1].
+    metadata : {'classifier': 'Colour Model Conversion Function',
+        'method_name': 'CIE 1931', 'method_strict_name': 'CIE 1931'}
 
     Examples
     --------
@@ -291,19 +306,22 @@ def XYZ_to_xy(
     Parameters
     ----------
     XYZ : array_like
+        metadata : {'type': 'CIE XYZ', 'symbol': 'XYZ', 'extent': (0, 1)}
         *CIE XYZ* tristimulus values.
     illuminant : array_like, optional
+        metadata : {'type': 'CIE xy', 'symbol': 'xy', 'extent': (0, 1)}
         Reference *illuminant* chromaticity coordinates.
 
     Returns
     -------
     ndarray
+        metadata : {'type': 'CIE xy', 'symbol': 'xy', 'extent': (0, 1)}
         *xy* chromaticity coordinates.
 
     Notes
     -----
-    -   Input *CIE XYZ* tristimulus values are in domain [0, 1].
-    -   Output *xy* chromaticity coordinates are in range [0, 1].
+    metadata : {'classifier': 'Colour Model Conversion Function',
+        'method_name': 'CIE 1931', 'method_strict_name': 'CIE 1931'}
 
     Examples
     --------
