@@ -381,4 +381,9 @@ def setup(app):
     app.connect('autodoc-process-docstring', _autodoc_process_docstring)
 
 
+import time
+
+start = time.time()
 import colour
+end = time.time()
+print(end - start)
